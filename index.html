@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Fighters Arena</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="round-timer" id="timer">60</div>
+        
+        <div class="hud">
+            <div class="player-info">
+                <h3>🥊 Player 1 (Red Fighter)</h3>
+                <div class="health-bar">
+                    <div class="health-fill" id="health1" style="width: 100%"></div>
+                </div>
+                <p>Health: <span id="hp1">100</span>/100</p>
+                <p>Score: <span id="score1">0</span></p>
+            </div>
+            
+            <div class="player-info">
+                <h3>🥊 Player 2 (Blue Fighter)</h3>
+                <div class="health-bar">
+                    <div class="health-fill" id="health2" style="width: 100%"></div>
+                </div>
+                <p>Health: <span id="hp2">100</span>/100</p>
+                <p>Score: <span id="score2">0</span></p>
+            </div>
+        </div>
+
+        <div class="fighter player1" id="fighter1"></div>
+        <div class="fighter player2" id="fighter2"></div>
+
+        <div class="combo-counter" id="combo1">COMBO!</div>
+        <div class="combo-counter" id="combo2">COMBO!</div>
+
+        <div class="controls">
+            <div class="control-group">
+                <h4>Player 1 Controls</h4>
+                <p>Move: A/D keys</p>
+                <p>Jump: W key</p>
+                <p>Attack: S key</p>
+                <p>Block: X key</p>
+            </div>
+            
+            <div class="control-group">
+                <h4>Player 2 Controls</h4>
+                <p>Move: ←/→ arrows</p>
+                <p>Jump: ↑ arrow</p>
+                <p>Attack: ↓ arrow</p>
+                <p>Block: M key</p>
+            </div>
+        </div>
+
+        <div class="game-over" id="gameOver">
+            <h2 id="winnerText">Game Over!</h2>
+            <p id="finalScore"></p>
+            <button class="restart-btn" onclick="restartGame()">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
